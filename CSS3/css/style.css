@@ -12,3 +12,15 @@ p {
     font-style: italic;
     font-weight: bold;    
 }
+
+.teste {
+    color: red;
+}
+
+#paragrafo {
+    font-size: 3em;
+}
+
+[name=paragrafo] {
+    color: blue;
+}
