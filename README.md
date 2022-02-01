@@ -1,2 +1,2 @@
-# Curso-Full-Stack-danki.code
- Curso de formação Full-Stack
+# Curso-JavaScript-CursoemVideo
+ Curso de JavaScript do Curso em Video
