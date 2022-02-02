@@ -8,12 +8,18 @@
 </head>
 <body>
     <script>
-        // Podemos utilizar alguns parametros na string como
+        // Podemos utilizar alguns parâmetros na string como
         // s.length - quantos caracteres a string tem
         // s.toUpperCase() - tudo para "MAIÚSCULAS"
         // s.toLowerCase() - tudo para "minúsculas"
         var nome = window.prompt("Qual é o seu nome")
         document.write(`Olá ${nome}, seu nome tem ${nome.length} letras.`)
+        // Também podemos inserir parâmetros em números
+        var peso = Number(window.prompt("Qual é o seu peso?"))
+        var sal = Number(window.prompt("Qual é o seu salário?"))
+        document.write(` O seu peso é de ${peso.toFixed(2)} Kg, e o seu salário é de ${sal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`)
+        // var.toFixed() para fixar o número de casas decimais
+        // var.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) para valores monetários
     </script>
 </body>
 </html>
