@@ -13,20 +13,33 @@ function start() {
         item.text = `Valor ${n} adicionado.`
         tab.appendChild(item)
     }
+    num.value = ''
+    num.focus()
 }
 function analisar() {
     let total = list.length
-    res.innerHTML = `Ao todo, temos ${total} números cadastrados. <br>`
-    list.sort()
-    let menor = list[0]
-    res.innerHTML += `O menor valor informado foi ${menor}. <br>`
-    let maior = list[total]
-    res.innerHTML += `O maior valor informado foi ${maior}. <br>`
-    let soma = 0
-    for (c = 0; c < total; c++) {
-        soma += list[c]
+    if (total != 0) {
+        res.innerHTML = `Ao todo, temos ${total} números cadastrados. <br>`
+        let maior = list[0]
+        let menor = list[0]
+        for (let position in list) {
+            if (list[position] > maior) {
+                maior = list[position]
+            }
+            if (list[position] < menor) {
+                menor = list[position]
+            }
+        }        
+        res.innerHTML += `O menor valor informado foi ${maior}. <br>`
+        res.innerHTML += `O maior valor informado foi ${menor}. <br>`
+        let soma = 0
+        for (c = 0; c < total; c++) {
+            soma += list[c]
+        }
+        res.innerHTML += `Somando todos os valores, temos ${soma}. <br>`
+        let media = soma / total
+        res.innerHTML += `A média dos valores digitados é ${media}.`
+    } else {
+        window.alert('Adicione valores antes de finalizar!')
     }
-    res.innerHTML += `Somando todos os valores, temos ${soma}. <br>`
-    let media = soma / total
-    res.innerHTML += `A média dos valores digitados é ${media}.`
 }
